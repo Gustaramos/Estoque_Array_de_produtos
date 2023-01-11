@@ -2,8 +2,9 @@ package default_package;
 
 public class Estoque {
 	Produto[] produtos;
+	private int quantidadeTotal;
 	
-	void listarProdutos() {
+	public void listarProdutos() {
 		System.out.println("Produtos em estoque:");
 		System.out.println("---------------------");
 		
@@ -12,5 +13,10 @@ public class Estoque {
 		}
 	}
 	
-
+	public void totalItens() {
+		for(int i = 0; i < produtos.length; i++) {
+		this.quantidadeTotal += produtos[i].getObterQuantidade();
+		}
+		System.out.println("Quantidade total de itens no estoque: " + quantidadeTotal);
+	}
 }

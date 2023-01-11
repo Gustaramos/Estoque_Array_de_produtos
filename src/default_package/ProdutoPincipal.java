@@ -20,15 +20,17 @@ public class ProdutoPincipal {
 			System.out.println("Produto: " + i);
 			System.out.println("-----------------------------");
 			System.out.println("Descrição: ");
-			estoque.produtos[i].descricao = input.nextLine();
+			estoque.produtos[i].setObterDescricao(input.nextLine());
 			
 			System.out.println("Quantidade de itens: ");
-			estoque.produtos[i].quantidade = input.nextInt();
+			estoque.produtos[i].setObterQuantidade(input.nextInt());
 			input.nextLine();
 			
+		
 		}
 		
 		estoque.listarProdutos();	
+		estoque.totalItens();
 	}
 
 }
